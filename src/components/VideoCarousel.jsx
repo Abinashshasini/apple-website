@@ -168,10 +168,12 @@ const VideoCarousel = () => {
       }
 
       const animationUpdate = () => {
-        animation.progress(
-          videoRef.current[videoId].currentTime /
-            highlightsSlides[videoId].videoDuration
-        );
+        if (videoRef.current[videoId].currentTime) {
+          animation.progress(
+            videoRef.current[videoId].currentTime /
+              highlightsSlides[videoId].videoDuration
+          );
+        }
       };
 
       if (isPlaying) {
