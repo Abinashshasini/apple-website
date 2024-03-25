@@ -1,6 +1,6 @@
 <div align="center">
   <br />
-    <a href="https://youtu.be/kRQbRAJ4-Fs" target="_blank">
+    <a target="_blank">
       <img src="https://i.postimg.cc/37PnQw8n/Image-from.png" alt="Project Banner">
     </a>
   <br />
@@ -52,8 +52,8 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
-git clone https://github.com/JavaScript-Mastery-Pro/iphone-doc.git
-cd iphone-doc
+https://github.com/Abinashshasini/apple-website.git
+cd apple-website
 ```
 
 **Installation**
