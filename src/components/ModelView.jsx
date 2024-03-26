@@ -1,16 +1,13 @@
 /* eslint-disable react/no-unknown-property */
 import { lazy } from 'react';
-import {
-  Html,
-  OrbitControls,
-  PerspectiveCamera,
-  View,
-} from '@react-three/drei';
+import { OrbitControls, PerspectiveCamera, View } from '@react-three/drei';
 import PropTypes from 'prop-types';
 import { Suspense } from 'react';
 import * as THREE from 'three';
 import Lights from './Lights';
-import Iphone from './Iphone';
+import Loader from './Loader';
+
+const Iphone = lazy(() => import('./Iphone'));
 
 const ModelView = ({
   index,
@@ -25,7 +22,7 @@ const ModelView = ({
     <View
       index={index}
       id={gspaType}
-      className={`w-full h-full ${index === 2 ? 'right-[-100%]' : ''}`}
+      className={`w-full h-full absolute ${index === 2 ? 'right-[-100%]' : ''}`}
     >
       {/* Ambeint Light */}
       <ambientLight intensity={0.3} />
@@ -52,13 +49,7 @@ const ModelView = ({
         name={`${index === 1 ? 'small' : 'large'}`}
         position={[0, 0, 0]}
       >
-        <Suspense
-          fallback={
-            <Html>
-              <div>loading</div>
-            </Html>
-          }
-        >
+        <Suspense fallback={<Loader />}>
           <Iphone
             scale={index === 1 ? [15, 15, 15] : [17, 17, 17]}
             item={item}
