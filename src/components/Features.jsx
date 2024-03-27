@@ -84,7 +84,7 @@ const Features = () => {
                 </div>
               </div>
               <div className="feature-text-container">
-                <div className="flex-1 flex-center">
+                <div className="flex-1 flex justify-start items-center">
                   <p className="feature-text g_text">
                     iPhone 15 Pro is{' '}
                     <span className="text-white">
@@ -95,7 +95,7 @@ const Features = () => {
                     Mars.
                   </p>
                 </div>
-                <div className="flex-1 flex-center">
+                <div className="flex-1 flex justify-start items-center">
                   <p className="feature-text g_text">
                     Titanium has one of the best strength-to-weight ratios of
                     any metal, making these our{' '}
