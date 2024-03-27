@@ -168,10 +168,7 @@ const VideoCarousel = () => {
       }
 
       const animationUpdate = () => {
-        if (
-          videoRef.current[videoId] &&
-          videoRef.current[videoId.currentTime]
-        ) {
+        if (videoRef.current[videoId.currentTime]) {
           animation.progress(
             videoRef.current[videoId].currentTime /
               highlightsSlides[videoId].videoDuration
