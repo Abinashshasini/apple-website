@@ -99,7 +99,7 @@ const Model = () => {
                 inset: 0,
                 overflow: 'hidden',
               }}
-              eventSource={document.getElementById('root')}
+              eventSource={document.getElementById('')}
             >
               <View.Port></View.Port>
             </Canvas>
