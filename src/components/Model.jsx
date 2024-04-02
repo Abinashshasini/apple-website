@@ -15,7 +15,7 @@ const Model = () => {
   const [size, setSize] = useState('small');
   const [model, setModel] = useState({
     title: 'iPhone 15 pro in Natural Titanium',
-    color: ['#858A81', '#ffe7b9', '#6f6c64'],
+    color: ['#8F8A81', '#ffe7b9', '#6f6c64'],
     img: yellowImg,
   });
   /**
@@ -96,10 +96,14 @@ const Model = () => {
               className="w-full h-full"
               style={{
                 position: 'fixed',
-                inset: 0,
+                top: 0,
+                bottom: 0,
+                left: 0,
+                right: 0,
                 overflow: 'hidden',
               }}
-              eventSource={document.getElementById('')}
+              id="canvas_cnt"
+              eventSource={document.getElementById('root')}
             >
               <View.Port></View.Port>
             </Canvas>
